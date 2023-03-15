@@ -8,11 +8,11 @@ Allows user to select locations, then scans folder hierarchies at those location
 
 Presents list of found projects to user, asks for confirmation to proceed.
 
-Moves `Log`, `Library` and `obj` folders to Trash. (Renaming them so that if the user opens Trash she see what came from where.)
+Moves `Log`, `Library` and `obj` folders to Trash. (Renaming them so that if the user opens Trash she can see what came from where.)
 
 Presents a simple report to show what happened.
 
 The downside: the next time you open a Unity project that has been thusly "cleaned", Unity will need to regenerate cached stuff.
 
-The upside: I had so many unity projects on my machine taking up a ridiculous amount of hard drive space, and this helped free a lot of it up.
+The upside: I had so many Unity projects on my machine taking up a ridiculous amount of hard drive space, and this helped free a lot of it up.
 
