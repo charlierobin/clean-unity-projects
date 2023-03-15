@@ -28,5 +28,4 @@ https://github.com/arsenetar/send2trash
 
 I wrote this for myself, to work on my computer with my hard drive setup etc. It works and works nicely, and I'm very pleased with it.
 
-But as for what happens on other people's computers, Windows machines, etc etc, well, who knows…
-
+There's a fair amount of error checking, but as for what happens on other people's computers, Windows machines, etc etc, well, who knows…
