@@ -11,6 +11,8 @@ def getListOfPossiblePlacesToScan():
 
     paths = []
 
+    ignore = ["/System/Volumes/Data", "/private/var/vm", "/Volumes/Recovery", "/"]
+
     documentsPath = Path.home()
 
     documentsPath = os.path.join(documentsPath, "Documents")
@@ -25,13 +27,15 @@ def getListOfPossiblePlacesToScan():
 
     lines = text.split("\n")
 
-    for i in range(2, len(lines)):
+    lines = lines[1:]
+
+    for i in range(len(lines)):
 
         bits = lines[i].split("%   ")
 
         path = bits[len(bits)-1]
 
-        if path != "/System/Volumes/Data" and path != "/private/var/vm" and path != "/Volumes/Recovery":
+        if path not in ignore:
 
             paths.append(path)
 
@@ -59,7 +63,8 @@ def letUserSelectListOfProjectsToClean(projects):
 
         (path, projectFolderName, productName, companyName, version) = p
 
-        captions.append(path + "\t" + productName + "\t" + companyName + "\t" + version)
+        captions.append(path + "\t" + productName + "\t" +
+                        companyName + "\t" + version)
 
     selected = picker(
         captions, "Please select the projects you want to clean")

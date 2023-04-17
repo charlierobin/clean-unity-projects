@@ -1,21 +1,21 @@
-def picker(places, caption):
+def picker(options, caption):
 
     done = False
 
     selected = []
 
-    while not done and len(places) > 0:
+    while not done and len(options) > 0:
 
         print("")
 
         number = 1
 
-        for place in places:
+        for option in options:
 
             if selected.count(number - 1) == 0:
-                print("   " + str(number) + ": " + str(place) + "   ")
+                print("   " + str(number) + ": " + str(option) + "   ")
             else:
-                print(">  " + str(number) + ": " + str(place) + "  <")
+                print(">  " + str(number) + ": " + str(option) + "  <")
 
             number = number + 1
 
@@ -41,7 +41,7 @@ def picker(places, caption):
             if remove:
                 selected = []
             else:
-                for x in range(len(places)):
+                for x in range(len(options)):
                     if selected.count(x) == 0:
                         selected.append(x)
 
@@ -52,7 +52,7 @@ def picker(places, caption):
             command = int(command)
             command = command - 1
 
-            if command <= len(places):
+            if command <= len(options):
 
                 if remove:
                     if selected.count(command) > 0:
@@ -64,16 +64,16 @@ def picker(places, caption):
 
             if remove:
 
-                for x in range(len(places)):
+                for x in range(len(options)):
 
-                    if command in places[x]:
+                    if command in options[x]:
                         if selected.count(x) > 0:
                             selected.remove(x)
             else:
 
-                for x in range(len(places)):
+                for x in range(len(options)):
 
-                    if command in places[x]:
+                    if command in options[x]:
                         selected.append(x)
 
     return selected
