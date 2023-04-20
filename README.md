@@ -12,6 +12,8 @@ Moves `Log`, `Library` and `obj` folders to Trash. (Renaming them so that if the
 
 Presents a simple report to show what happened.
 
+https://user-images.githubusercontent.com/10506323/233299145-eed956ea-54c9-4b9a-a388-9a9d73c64c07.mp4
+
 The downside: the next time you open a Unity project that has been thusly "cleaned", Unity will need to regenerate cached stuff.
 
 The upside: I had so many Unity projects on my machine taking up a ridiculous amount of hard drive space, and this helped free a lot of it up.
